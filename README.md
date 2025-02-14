@@ -20,7 +20,7 @@ This project aims to develop a trading model that utilizes a dynamic weighting a
 1. Clone the repository
 
 ```shell
-git clone https://github.com/Netanelshoshan/freqAI-LSTM.git
+git clone https://github.com/lbegiashvili10/freqai.git
 ```
 2. Copy the files to the freqtrade directory
 
@@ -59,7 +59,7 @@ freqtrade backtesting -c user_data/config-torch.json --breakdown day week month 
 1. Clone the repository
 
 ```shell
-git clone https://github.com/Netanelshoshan/freqAI-LSTM.git
+git clone https://github.com/lbegiashvili10/freqai.git
 ```
 2. Build local docker images
 
