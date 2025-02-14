@@ -48,8 +48,7 @@
     "pair_whitelist": [
       "BTC/USDT:USDT",
       "ETH/USDT:USDT",
-      "LTC/USDT:USDT",
-      "BNB/USDT:USDT",
+      "LTC/USDT:USDT",      
       "XRP/USDT:USDT",
       "ADA/USDT:USDT",
       "DOT/USDT:USDT",
@@ -111,7 +110,7 @@
       "trainer_kwargs": {
         "n_steps": null,
         "batch_size": 32,
-        "n_epochs": 10,
+        "n_epochs": 10
       },
       "model_kwargs": {
         "num_lstm_layers": 3,
@@ -120,6 +119,6 @@
         "window_size": 5
       }
     }
-  },
-  //telegram and api
+  }
+  
 }
