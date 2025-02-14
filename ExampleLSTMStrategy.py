@@ -73,7 +73,7 @@ class ExampleLSTMStrategy(IStrategy):
     w8 = RealParameter(0, 1, default=0.15, space='buy')
 
     def feature_engineering_expand_all(self, dataframe: DataFrame, period: int,
-                                       metadata: Dict, **kwargs):
+                                       metadata: dict, **kwargs):
 
         dataframe["%-cci-period"] = ta.CCI(dataframe, timeperiod=20)
         dataframe["%-rsi-period"] = ta.RSI(dataframe, timeperiod=10)
@@ -100,21 +100,21 @@ class ExampleLSTMStrategy(IStrategy):
 
         return dataframe
 
-    def feature_engineering_expand_basic(self, dataframe: DataFrame, metadata: Dict, **kwargs):
+    def feature_engineering_expand_basic(self, dataframe: DataFrame, metadata: dict, **kwargs):
 
         dataframe["%-pct-change"] = dataframe["close"].pct_change()
         dataframe["%-raw_volume"] = dataframe["volume"]
         dataframe["%-raw_price"] = dataframe["close"]
         return dataframe
 
-    def feature_engineering_standard(self, dataframe: DataFrame, metadata: Dict, **kwargs):
+    def feature_engineering_standard(self, dataframe: DataFrame, metadata: dict, **kwargs):
 
         dataframe['date'] = pd.to_datetime(dataframe['date'])
         dataframe["%-day_of_week"] = dataframe["date"].dt.dayofweek
         dataframe["%-hour_of_day"] = dataframe["date"].dt.hour
         return dataframe
 
-    def set_freqai_targets(self, dataframe: DataFrame, metadata: Dict, **kwargs) -> DataFrame:
+    def set_freqai_targets(self, dataframe: DataFrame, metadata: dict, **kwargs) -> DataFrame:
 
         dataframe['ma'] = ta.SMA(dataframe, timeperiod=10)
         dataframe['roc'] = ta.ROC(dataframe, timeperiod=2)
