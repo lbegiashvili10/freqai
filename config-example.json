@@ -68,6 +68,18 @@
       "seed": 42
     }
   ],
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "6a26a628a48a08f07679de2f0a593bd0bdc505adfa89496beaa0942c3474cd31",
+    "ws_token": "naTf_AoVi7LnNMlCWDIzpOu97vMtfyrnPw",
+    "CORS_origins": ["http://localhost:8080"],
+    "username": "fq",
+    "password": "fq"
+  },
   "freqai": {
     "enabled": true,
     "identifier": "torch-lstm12",
