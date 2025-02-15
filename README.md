@@ -64,7 +64,7 @@ git clone https://github.com/lbegiashvili10/freqai.git
 2. Build local docker images
 
 ```shell
-cd freqAI-LSTM
+cd freqai
 docker build -f torch/Dockerfile  -t freqai .
 ```
 3. Download data and Run the backtest
