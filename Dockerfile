@@ -10,7 +10,7 @@ ADD --keep-git-dir=true https://github.com/lbegiashvili10/freqai.git /opt/freqai
 WORKDIR /opt/freqai-lstm
 
 COPY ./user_data /freqtrade/user_data
-COPY ./requirements /freqtrade/freqtrade/freqai/torch/
+COPY ./freqtrade/freqai/torch /freqtrade/freqtrade/freqai/torch/
 COPY ./base_models /freqtrade/freqtrade/freqai/base_models/
 
 
