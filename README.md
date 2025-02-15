@@ -65,13 +65,13 @@ git clone https://github.com/lbegiashvili10/freqai.git
 
 ```shell
 cd freqai
-docker build -f torch/Dockerfile  -t freqai .
+docker build -t freqai .
 ```
 3. Download data and Run the backtest
 ```
-docker run -v ./data:/freqtrade/user_data/data  -it freqai  download-data -c user_data/config-torch.json --timerange 20230101-20240529 --timeframe 15m 30m 1h 2h 4h 8h 1d --erase
+docker run -v ./user_data:/freqtrade/user_data/  -it freqai  download-data -c user_data/config-torch.json --days 100 --timeframe 15m 30m 1h 2h 4h 8h 1d --erase
 
-docker run -v ./data:/freqtrade/user_data/data  -it freqai  backtesting -c user_data/config-torch.json --breakdown day week month --timerange 20240301-20240401 
+docker run -v ./user_data:/freqtrade/user_data/ -v ./base_models:/freqtrade/freqtrade/freqai/base_models/ -it freqai  backtesting -c user_data/config-torch.json --breakdown day week month --timerange 20241201-20250213 
 ```
 
 
