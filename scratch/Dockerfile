@@ -9,13 +9,10 @@ RUN apt-get update \
 ADD --keep-git-dir=true https://github.com/lbegiashvili10/freqai.git /opt/freqai-lstm
 WORKDIR /opt/freqai-lstm
 
-RUN mkdir -p /freqtrade/user_data/strategies /freqtrade/user_data/freqaimodels \
-  && cp config-example.json /freqtrade/user_data/config-torch.json \
-  && cp ExampleLSTMStrategy.py /freqtrade/user_data/strategies/ \
-  && cp torch/BasePyTorchModel.py /freqtrade/freqtrade/freqai/base_models/ \
-  && cp torch/PyTorchLSTMModel.py /freqtrade/freqtrade/freqai/torch/ \
-  && cp torch/PyTorchModelTrainer.py /freqtrade/freqtrade/freqai/torch/ \
-  && cp torch/PyTorchLSTMRegressor.py /freqtrade/user_data/freqaimodels/
+COPY ./user_data /freqtrade/user_data
+COPY ./requirements /freqtrade/freqtrade/freqai/torch/
+COPY ./base_models /freqtrade/freqtrade/freqai/base_models/
+
 
 WORKDIR /freqtrade
 RUN sed -i "s/5m/1h/" freqtrade/configuration/config_validation.py
