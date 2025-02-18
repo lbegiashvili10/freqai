@@ -1,7 +1,7 @@
 ---
 services:
   freqtrade:
-    image: freqtradeorg/freqtrade:stable_freqaitorch
+    image: freqailb:latest
     # Enable GPU Image and GPU Resources
     # Make sure to uncomment the whole deploy section
     # deploy:
@@ -19,19 +19,18 @@ services:
     restart: unless-stopped
     container_name: freqtrade
     volumes:
-      - "../freqai:/freqtrade/freqai"
       - "./user_data:/freqtrade/user_data"
     # Expose api on port 8080 (localhost only)
     # Please read the https://www.freqtrade.io/en/stable/rest-api/ documentation
     # for more information.
     ports:
-      - "127.0.0.1:8080:8080"
+      - "0.0.0.0:8080:8080"
     # Default command used when running `docker compose up`
     #entrypoint: ["sh", "-c", "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"]
     command: >       
       trade
       --logfile /freqtrade/user_data/logs/freqtrade.log
       --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
-      --config /freqtrade/user_data/config-torch.json
+      --config /freqtrade/user_data/config.json
       --freqaimodel PyTorchLSTMRegressor
       --strategy ExampleLSTMStrategy
