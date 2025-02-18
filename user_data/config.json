@@ -81,11 +81,6 @@
     "username": "fq",
     "password": "fq"
   },
-    "telegram": {
-        "enabled": true,
-        "token": "7658033407:AAElTKwRPOR7tG9T6aXTVpyfADpKGxRbXqE",
-        "chat_id": "2004304874"
-    },  
   "freqai": {
     "enabled": true,
     "identifier": "torch-lstm12",
