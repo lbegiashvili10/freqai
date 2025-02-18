@@ -14,7 +14,7 @@ COPY ./freqtrade /freqtrade/freqtrade/
 
 
 WORKDIR /freqtrade
-RUN sed -i "s/5m/1h/" freqtrade/configuration/config_validation.py
+# RUN sed -i "s/5m/1h/" freqtrade/configuration/config_validation.py
 USER ftuser
 
 RUN  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
