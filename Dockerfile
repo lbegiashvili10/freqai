@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # FROM freqtradeorg/freqtrade:develop_freqairl
-FROM freqtradeorg/freqtrade:develop_freqairl
+FROM freqtradeorg/freqtrade:stable_freqaitorch
 USER root
 
 RUN apt-get update \
@@ -10,8 +10,7 @@ ADD --keep-git-dir=true https://github.com/lbegiashvili10/freqai.git /opt/freqai
 WORKDIR /opt/freqai-lstm
 
 COPY ./user_data /freqtrade/user_data
-COPY ./freqtrade/freqai/torch /freqtrade/freqtrade/freqai/torch/
-COPY ./base_models /freqtrade/freqtrade/freqai/base_models/
+COPY ./freqtrade /freqtrade/freqtrade/
 
 
 WORKDIR /freqtrade
