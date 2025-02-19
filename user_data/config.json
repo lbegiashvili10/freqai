@@ -47,6 +47,8 @@
       "rateLimit": 50
     },
     "pair_whitelist": [
+      "GPS/USDT:USDT",
+      "SHELL/USDT:USDT",
       "BTC/USDT:USDT",
       "ETH/USDT:USDT",
       "BNB/USDT:USDT",
