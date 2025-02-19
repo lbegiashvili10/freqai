@@ -339,7 +339,7 @@ def _validate_freqai_hyperopt(conf: dict[str, Any]) -> None:
 def _validate_freqai_include_timeframes(conf: dict[str, Any], preliminary: bool) -> None:
     freqai_enabled = conf.get("freqai", {}).get("enabled", False)
     if freqai_enabled:
-        main_tf = conf.get("timeframe", "5m")
+        main_tf = conf.get("timeframe", "3m")
         freqai_include_timeframes = (
             conf.get("freqai", {}).get("feature_parameters", {}).get("include_timeframes", [])
         )
