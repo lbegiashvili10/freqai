@@ -51,12 +51,12 @@ class ExampleLSTMStrategy(IStrategy):
     trailing_stop_positive_offset = 0.0139
     trailing_only_offset_is_reached = True
 
-    timeframe = "3m"
+    timeframe = "5m"
     can_short = True
     use_exit_signal = True
     process_only_new_candles = True
 
-    startup_candle_count = 10
+    startup_candle_count = 2
 
     threshold_buy = RealParameter(-1, 1, default=0, space='buy')
     threshold_sell = RealParameter(-1, 1, default=0, space='sell')

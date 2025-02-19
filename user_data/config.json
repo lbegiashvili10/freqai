@@ -101,9 +101,10 @@
         "ETH/USDT:USDT"
       ],
       "include_timeframes": [
-        "3m",
-	      "5m",
-        "1h"
+        "5m",
+	      "15m",
+        "1h",
+        "8h"
       ],
       "label_period_candles": 12,
       "include_shifted_candidates": 12,
