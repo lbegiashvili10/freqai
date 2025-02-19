@@ -56,7 +56,7 @@ class ExampleLSTMStrategy(IStrategy):
     use_exit_signal = True
     process_only_new_candles = True
 
-    startup_candle_count = 2
+    startup_candle_count = 10
 
     threshold_buy = RealParameter(-1, 1, default=0, space='buy')
     threshold_sell = RealParameter(-1, 1, default=0, space='sell')
