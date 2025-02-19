@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# FROM freqtradeorg/freqtrade:develop_freqairl
+# Main FROM freqtradeorg/freqtrade:develop_freqairl
 FROM freqtradeorg/freqtrade:stable_freqaitorch
 USER root
 
