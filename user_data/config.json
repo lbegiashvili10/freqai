@@ -48,6 +48,8 @@
     },
     "pair_whitelist": [
       "BTC/USDT:USDT",
+      "GPS/USDT:USDT",
+      "SHELL/USDT:USDT",
       "ETH/USDT:USDT",
       "BNB/USDT:USDT",
       "XRP/USDT:USDT",
